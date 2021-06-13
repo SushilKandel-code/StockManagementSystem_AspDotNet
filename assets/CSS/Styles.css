@@ -1,0 +1,17 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Barlow&family=PT+Sans&display=swap");
+* {
+    box-sizing: border-box;
+    margin: 0;
+
+}
+.labels {
+    font-family: "Barlow", sans-serif;
+    font-weight: bold;
+    top: -267px;
+    left: 15px;
+}
+#createAccount {
+    align-self: center;
+    font-family: "Barlow", sans-serif;
+}
+

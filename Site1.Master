@@ -1,0 +1,99 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="StockManagementApplication.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="icon" href="assets/img/items-chart.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="assets/CSS/master-styles.css">
+
+    <title>Your Stock Manager</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body id="body-pd" class="body-pd">
+    <form id="form1" runat="server">
+        <header class="header body-pd" id="header">
+            <div class="header__toggle">
+                <i class='bx bx-menu' id="header-toggle"></i>
+            </div>
+            <div style="display:flex; justify-content:flex-end; width: 90%">
+                <asp:Button ID="btnLogout" runat="server" Text="Log Out" CssClass="btn btn-danger mr-4 mb-2" OnClick="btnLogout_Click"/>
+                 <asp:Label ID="lblUser" runat="server" Text="User" CssClass="mt-2"></asp:Label>
+            </div>
+            <div class="header__img" style="display:flex">
+                <img src="assets/img/images.png" alt="">
+            </div>
+        </header>
+
+        <div class="l-navbar show" id="nav-bar" style="display:flex; flex-grow: 1; height:200%">
+            <nav class="nav" style="height:100%">
+                <div>
+                    <a href="Dashboard.aspx" class="nav__logo">
+                        <i class='bx bx-layer nav__logo-icon'></i>
+                        <span class="nav__logo-name">Your Stock Manager</span>
+                    </a>
+
+                    <div class="nav__list">
+                        <a href="Dashboard.aspx" class="nav__link">
+                        <i class='bx bx-home-smile nav__icon' ></i>
+                            <span class="nav__name">Dashboard</span>
+                        </a>
+
+                        <a href="User.aspx" class="nav__link">
+                            <i class='bx bx-face-mask nav__icon' ><img src="https://img.icons8.com/ios-glyphs/30/f6f6f6/group.png" style="color:white"/></i>
+                            <span class="nav__name">Customers</span>
+                        </a>
+
+                         <a href="StockUser.aspx" class="nav__link">
+                            <i class='bx bx-user nav__icon' ></i>
+                            <span class="nav__name">Users</span>
+                        </a>
+                        
+                        <a href="Category.aspx" class="nav__link">
+                            <i class='bx bx-grid-alt nav__icon' ></i>
+                            <span class="nav__name">Categories</span>
+                        </a>
+
+                        <a href="Items.aspx" class="nav__link">
+                            <i class='bx bx-bookmark nav__icon' ></i>
+                            <span class="nav__name">Items</span>
+                        </a>
+
+                        <a href="Sales.aspx" class="nav__link">
+                            <i class='bx bx-cart-alt nav__icon' ></i>
+                            <span class="nav__name">Sales</span>
+                        </a>
+
+                        <a href="CustomerPurchases.aspx" class="nav__link">
+                            <i class='bx bx-purchase-tag-alt nav__icon' ></i>
+                            <span class="nav__name">Customer Purchases</span>
+                        </a>
+
+                         <a href="MyProfile.aspx" class="nav__link">
+                            <i class='bx bx-face-mask nav__icon' ><img src="https://img.icons8.com/material/24/f2f2f2/user-male-circle--v1.png"/></i>
+                            <span class="nav__name">My Profile</span>
+                        </a>
+                    </div>
+                </div>
+
+               
+            </nav>
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+    <script src="assets/js/main.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
